@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial</title>
 </head>
 <script>
-    function factorial(n){
-  let answer = 1;
-  if (n == 0 || n == 1){
-    return answer;
-  }else{
-    for(var i = n; i >= 1; i--){
-      answer = answer * i;
+  function factorial(n) {
+    let answer = 1;
+    if (n == 0 || n == 1) {
+      return answer;
+    } else {
+      for (var i = n; i >= 1; i--) {
+        answer = answer * i;
+      }
+      return answer;
     }
-    return answer;
-  }  
-}
-let n = 4;
-answer = factorial(n)
-console.log("The factorial of " + n + " is " + answer);
+  }
+  let n = 5;
+  answer = factorial(n);
+  console.log("The factorial of " + n + " is " + answer);
+  document.getElementById("res").innerHTML = "The factorial of the number " + n + " is: " + answer;
 </script>
 
 
+
 <body>
-    
+
+  <form>
+    <label>Enter Value 1:</label>
+    <input type="text" id="in" name="First_num" value=" " />
+
+    <br><br>
+    <input type="button" value=" Factorial " onclick="factorial(n)" ; />
+    <p id="res"> </p>
+
+  </form>
+
+
+
 </body>
+
 </html>
